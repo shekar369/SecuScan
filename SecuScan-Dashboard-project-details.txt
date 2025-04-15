@@ -1,0 +1,26 @@
+SecuScan Dashboard project:
+
+Cross Platform Support App Download:
+https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2.16.1_Crossplatform.zip
+
+Website to download ZAP: Windows
+https://www.zaproxy.org/download/
+
+We cannot download ZAP in chrome, it is restricting
+
+Website to download JDK: https://adoptium.net/en-GB/download/
+
+JDK path : C:\Program Files\Eclipse Adoptium\jdk-17.0.14.7-hotspot\
+
+
+
+
+curl -X POST "http://127.0.0.1:8000/websites" -H "Content-Type: application/json" -d "{\"url\": \"https://vidyayug.com\", \"name\": \"Test website Vuln Site\"}"
+
+C:\Program Files\ZAP\Zed Attack Proxy>curl -X POST "http://127.0.0.1:8000/websites" -H "Content-Type: application/json" -d "{\"url\": \"https://vidyayug.com\", \"name\": \"Test website Vuln Site\"}"
+{"id":"b09670a7-7a4b-4db2-a57b-c6aafbc1e018","url":"https://vidyayug.com/","name":"Test website Vuln Site","created_at":"2025-04-09T17:20:10.033167+05:30","last_scanned_at":null}
+
+
+java -jar C:\OWASP\ZAP\ZAP_2.16.1_Crossplatform\ZAP_2.16.1\zap-2.16.1.jar -cmd -quickurl https://vidyayug.com/ -quickprogress -quickout vy_report.xml
+
+
