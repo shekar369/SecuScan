@@ -1,0 +1,7 @@
+# Ignore junk inside backend
+backend/__pycache__/
+backend/.env*
+backend/*.pyc
+backend/*.log
+backend/.vscode/
+backend/venv/
